@@ -591,3 +591,100 @@ nav {
         padding: 1rem 0.5rem 0.8rem 0.5rem;
     }
 }
+
+/* === Hero Stats Improvements === */
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    margin: 2rem 0 1.5rem 0;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.stat {
+    flex: 1 1 160px;
+    min-width: 140px;
+    max-width: 220px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(67, 173, 249, 0.08);
+    padding: 1.2rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+    position: relative;
+    text-align: center;
+}
+
+.stat:hover {
+    box-shadow: 0 6px 32px rgba(67, 173, 249, 0.16);
+    transform: translateY(-4px) scale(1.03);
+    background: #f6faff;
+}
+
+.stat-icon {
+    font-size: 2.2em;
+    margin-bottom: 0.3em;
+    color: #43adf9;
+    background: linear-gradient(120deg, #bed7f9 0%, #43adf9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-nmbr {
+    font-size: 2em;
+    font-weight: 800;
+    color: #232336;
+    margin-bottom: 0.1em;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.stat-label {
+    font-size: 1em;
+    color: #555;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .hero-stats {
+        gap: 1.2rem;
+        max-width: 100%;
+    }
+
+    .stat {
+        min-width: 120px;
+        padding: 1rem 0.7rem 0.8rem 0.7rem;
+    }
+
+    .stat-nmbr {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-stats {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        margin: 1.2rem 0 1rem 0;
+    }
+
+    .stat {
+        max-width: 100%;
+        min-width: 0;
+        padding: 0.8rem 0.5rem 0.7rem 0.5rem;
+    }
+}
