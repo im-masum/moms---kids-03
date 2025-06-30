@@ -598,12 +598,15 @@ nav {
 .hero-stats {
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    gap: 2rem;
+    align-items: center;
+    gap: 3rem;
     margin: 2rem 0 1.5rem 0;
     width: 100%;
     max-width: 100%;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin: 50px;
+    padding: min(1rem, 8%) 1rem;
 }
 
 .stat {
@@ -695,15 +698,15 @@ nav {
 /* === Enhanced Hero Scroll === */
 .hero-scroll {
     position: absolute;
-    
     left: 50%;
-    bottom: 0;
+    bottom: 10px;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.3em;
     background: var(--bg-main);
+    color: var(--text-main);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 2em;
@@ -713,12 +716,11 @@ nav {
     border-image: linear-gradient(120deg, #43adf9 0%, #bed7f9 100%);
     border-image-slice: 1;
     z-index: 10;
-    color: #232336;
     font-weight: 500;
     letter-spacing: 0.2px;
-    user-select: none;
     transition: box-shadow 0.2s, border 0.2s, background 0.2s;
-    padding: 0.5em 1.5em 0.7em 1.5em;
+    padding: min(.5rem, 8%) 2rem;
+    
 }
 
 .hero-scroll:focus, .hero-scroll:active, .hero-scroll:hover {
@@ -730,8 +732,8 @@ nav {
 .hero-scroll span {
     margin-bottom: 0.2em;
     font-size: 1rem;
-    color: #232336;
     opacity: 0.85;
+    color: var(--text-accent);
 }
 
 .scroll-arrow {
