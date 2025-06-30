@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mom & Kids Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">Mom & Kids</span>
+      </div>
+
+      <div class="nav-links">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#products" class="nav-link">Products </a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#payment" class="nav-link">Payment</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <div class="cart-icon" id="cart" onclick="location.href='cart.html'">
+          <span class="cart-icon-text">🛒</span>
+          <span id="cart-count" class="cart-count">0</span>
+        </div>
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+          <span class="menu-icon">
+
+          </span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-overlay"></div>
+
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="animate-text animate-gradient">Welcome to Mom & Kids</h1>
+        <p class="hero-subtitle animate-text typewriter">Your one-stop destination for quality products that make
+          motherhood beautiful</p>
+        <div class="hero-buttons">
+          <a href="#products" class="cta-btn primary glow">
+            <span>Shop Now</span>
+            <i class="arrow">→</i>
+          </a>
+          <a href="#features" class="cta-btn secondary">
+            <span>Learn More</span>
+            <i class="arrow">↓</i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-features">
+        <div class="hero-feature">
+          <span class="feature-icon">✨</span>
+          <p>Premium Quality</p>
+          <span class="feature-desc">Handpicked products for your family</span>
+        </div>
+        <div class="hero-feature">
+          <span class="feature-icon">🚚</span>
+          <p>Free Shipping</p>
+          <span class="feature-desc">On orders over $50</span>
+        </div>
+        <div class="hero-feature">
+          <span class="feature-icon">💝</span>
+          <p>Mom Approved</p>
+          <span class="feature-desc">Trusted by thousands of moms</span>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-content">
+            <span class="stat-nmbr" data-count="10000">10k+</span>
+            <span class="stat-label">Happy Customers</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fas fa-box"></i>
+          </div>
+          <div class="stat-content">
+            <span class="stat-nmbr" data-count="500">500+</span>
+            <span class="stat-label">Products</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <div class="stat-content">
+
+            <span class="stat-nmbr" data-count="24">24/7</span>
+            <span class="stat-label">Support</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <div class="stat-content">
+            <span class="stat-nmbr" data-count="48">48h</span>
+            <span class="stat-label">Delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="features" id="features">
+    <div class="features-header">
+      <h1>Our Features</h1>
+      <p>Discover why thousands of moms trust us for their family's needs</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-medal"></i>
+        </div>
+        <h2>Premium Quality</h2>
+        <p>Carefully selected products that meet the highest standards of quality and safety.</p>
+        <ul class="feature-list">
+          <li>Certified Materials</li>
+          <li>Safety Tested</li>
+          <li>Durable Products</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-truck"></i>
+        </div>
+        <h2>Fast Delivery</h2>
+        <p>Quick and reliable shipping to your doorstep with real-time tracking.</p>
+        <ul class="feature-list">
+          <li>Same Day Dispatch</li>
+          <li>Free Shipping</li>
+          <li>Track Orders</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h2>24/7 Support</h2>
+        <p>Our dedicated team is always ready to assist you with any questions.</p>
+        <ul class="feature-list">
+          <li>Live Chat</li>
+          <li>Phone Support</li>
+          <li>Email Support</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h2>Secure Shopping</h2>
+        <p>Shop with confidence using our secure payment system.</p>
+        <ul class="feature-list">
+          <li>SSL Protected</li>
+          <li>Secure Payments</li>
+          <li>Data Privacy</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-undo"></i>
+        </div>
+        <h2>Easy Returns</h2>
+        <p>Hassle-free return policy for your complete satisfaction.</p>
+        <ul class="feature-list">
+          <li>30-Day Returns</li>
+          <li>Free Returns</li>
+          <li>Quick Refunds</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h2>Loyalty Program</h2>
+        <p>Earn rewards and exclusive benefits with our loyalty program.</p>
+        <ul class="feature-list">
+          <li>Points System</li>
+          <li>Special Offers</li>
+          <li>Member Discounts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-header">
+      <h2 class="about-title">
+        <span class="title-text">About Us</span>
+        <span class="title-accent">❤</span>
+      </h2>
+      <p class="about-subtitle">Your trusted partner in motherhood and family care</p>
+      <div class="about-header-decoration">
+        <div class="decoration-line"></div>
+        <div class="decoration-dot"></div>
+        <div class="decoration-line"></div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="about-image">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1683120987336-517eccd4b1ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Mom & Kids Store">
+        <div class="image-overlay">
+          <span>Since 2020</span>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <div class="about-section-header animated-header" id="our-story">
+          <i class="fas fa-seedling"></i>
+          <span>Our Story</span>
+          <div class="about-section-accent glow-underline"></div>
+        </div>
+        <div class="about-story">
+          <p>Founded with a passion for supporting mothers and families, Mom & Kids has grown from a small local store
+            to a trusted online destination for quality products. We understand the unique needs of mothers and their
+            children, and we're committed to providing the best products and service.</p>
+        </div>
+        <!-- Wavy divider -->
+        <div class="about-wavy-divider">
+          <svg viewBox="0 0 1440 60" width="100%" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,30 Q360,60 720,30 T1440,30 V60 H0 Z" fill="#ff69b4" fill-opacity="0.07" />
+          </svg>
+        </div>
+
+        <div class="about-section-header animated-header" id="our-values">
+          <i class="fas fa-gem"></i>
+          <span>Our Values</span>
+          <div class="about-section-accent glow-underline"></div>
+        </div>
+        <div class="about-values">
+          <div class="values-grid">
+            <div class="value-item visible" tabindex="0" aria-label="Quality First">
+              <i class="fas fa-heart"></i>
+              <h4>Quality First</h4>
+              <p>We carefully select each product to ensure the highest standards of quality and safety.</p>
+              <span class="value-tooltip">Fun fact: Every product is mom-tested before it hits our shelves!</span>
+            </div>
+            <div class="value-item visible" tabindex="0" aria-label="Trust & Reliability">
+              <i class="fas fa-handshake"></i>
+              <h4>Trust & Reliability</h4>
+              <p>Building lasting relationships with our customers through honest and reliable service.</p>
+              <span class="value-tooltip">Did you know? 98% of our customers would recommend us to a friend.</span>
+            </div>
+            <div class="value-item visible" tabindex="0" aria-label="Sustainability">
+              <i class="fas fa-leaf"></i>
+              <h4>Sustainability</h4>
+              <p>Committed to eco-friendly practices and sustainable product choices.</p>
+              <span class="value-tooltip">We plant a tree for every 100 orders placed!</span>
+            </div>
+            <div class="value-item visible" tabindex="0" aria-label="Community">
+              <i class="fas fa-users"></i>
+              <h4>Community</h4>
+              <p>Supporting and empowering mothers through our growing community.</p>
+              <span class="value-tooltip">Join our monthly mom meetups online and offline!</span>
+            </div>
+          </div>
+        </div>
+        <!-- Wavy divider -->
+        <div class="about-wavy-divider">
+          <svg viewBox="0 0 1440 60" width="100%" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,30 Q360,0 720,30 T1440,30 V60 H0 Z" fill="#ffd700" fill-opacity="0.07" />
+          </svg>
+        </div>
+
+        <div class="about-section-header animated-header" id="our-team">
+          <i class="fas fa-users"></i>
+          <span>Our Team</span>
+          <div class="about-section-accent glow-underline"></div>
+        </div>
+        <div class="about-team">
+          <div class="team-grid">
+            <div class="team-member visible flip-card" tabindex="0" aria-label="Sarah Johnson, Founder & CEO">
+              <div class="member-image">
+                <img
+                  src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1727&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Sarah Johnson, Founder & CEO">
+              </div>
+              <h4>Sarah Johnson</h4>
+              <p>Founder & CEO</p>
+              <div class="team-socials">
+                <a href="#" aria-label="Sarah Johnson on LinkedIn" tabindex="0"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Sarah Johnson on Twitter" tabindex="0"><i class="fab fa-twitter"></i></a>
+              </div>
+              <button class="meet-btn" tabindex="0">Meet</button>
+            </div>
+            <div class="team-member visible flip-card" tabindex="0" aria-label="Emily Davis, Product Curator">
+              <div class="member-image">
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Emily Davis, Product Curator">
+              </div>
+              <h4>Emily Davis</h4>
+              <p>Product Curator</p>
+              <div class="team-socials">
+                <a href="#" aria-label="Emily Davis on LinkedIn" tabindex="0"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Emily Davis on Instagram" tabindex="0"><i class="fab fa-instagram"></i></a>
+              </div>
+              <button class="meet-btn" tabindex="0">Meet</button>
+            </div>
+            <div class="team-member visible flip-card" tabindex="0" aria-label="Jessica Lee, Customer Care">
+              <div class="member-image">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1682095664848-014a0a2bfd8a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Jessica Lee, Customer Care">
+              </div>
+              <h4>Jessica Lee</h4>
+              <p>Customer Care</p>
+              <div class="team-socials">
+                <a href="#" aria-label="Jessica Lee on LinkedIn" tabindex="0"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Jessica Lee on Facebook" tabindex="0"><i class="fab fa-facebook"></i></a>
+              </div>
+              <button class="meet-btn" tabindex="0">Meet</button>
+            </div>
+          </div>
+
+          <!-- Wavy divider -->
+          <div class="about-wavy-divider">
+            <svg viewBox="0 0 1440 60" width="100%" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0,30 Q360,60 720,30 T1440,30 V60 H0 Z" fill="#4a90e2" fill-opacity="0.07" />
+            </svg>
+          </div>
+
+          <div class="about-section-header animated-header" id="our-achievements">
+            <i class="fas fa-trophy"></i>
+            <span>Achievements</span>
+            <div class="about-section-accent glow-underline"></div>
+          </div>
+          <div class="about-achievements">
+            <div class="achievement-item visible" tabindex="0">
+              <div class="achievement-icon"><i class="fas fa-smile-beam"></i></div>
+              <div class="achievement-number" data-count="10000">0</div>
+              <div class="achievement-label">Happy Families</div>
+              <div class="achievement-progress">
+                <div class="achievement-bar" style="width:0%"></div>
+              </div>
+            </div>
+            <div class="achievement-item visible" tabindex="0">
+              <div class="achievement-icon"><i class="fas fa-box"></i></div>
+              <div class="achievement-number" data-count="500">0</div>
+              <div class="achievement-label">Products</div>
+              <div class="achievement-progress">
+                <div class="achievement-bar" style="width:0%"></div>
+              </div>
+            </div>
+            <div class="achievement-item visible" tabindex="0">
+              <div class="achievement-icon"><i class="fas fa-star"></i></div>
+              <div class="achievement-number" data-count="98">0</div>
+              <div class="achievement-label">Satisfaction</div>
+              <div class="achievement-progress">
+                <div class="achievement-bar" style="width:0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-header">
+      <h2>Get in Touch</h2>
+      <p>We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Our Location</h3>
+          <p>123 Motherhood Street<br>Family City, FC 12345</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-phone"></i>
+          <h3>Phone Number</h3>
+          <p>+1 (555) 123-4567<br>+1 (555) 765-4321</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Email Address</h3>
+          <p>info@momandkids.com<br>support@momandkids.com</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-clock"></i>
+          <h3>Working Hours</h3>
+          <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM</p>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Enter subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">
+          <span>Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986432970718!3d40.697149422113014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1647043087964!5m2!1sen!2s"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="cart" id="cart">
+    <div class="cart-header">
+      <div class="cart-header-content">
+        <div class="cart-header-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <div class="cart-header-text">
+          <h2>Your Shopping Cart</h2>
+          <p>Review your items and proceed to checkout</p>
+        </div>
+        <div class="cart-header-decoration">
+          <div class="decoration-line"></div>
+          <div class="decoration-dot"></div>
+          <div class="decoration-line"></div>
+        </div>
+      </div>
+      <div class="cart-header-stats">
+        <div class="cart-stat">
+          <span class="stat-number" id="cart-item-count">0</span>
+          <span class="stat-label">Items</span>
+        </div>
+        <div class="cart-stat">
+          <span class="stat-number" id="cart-total-value">$0.00</span>
+          <span class="stat-label">Total</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-container">
+      <div class="cart-items" id="cart-items">
+        <!-- Example cart item structure (to be rendered dynamically by JS) -->
+        <!--
+        <div class="cart-item-card">
+          <div class="cart-item-img">
+            <img src="product-image.jpg" alt="Product Name">
+          </div>
+          <div class="cart-item-details">
+            <div class="cart-item-title">Product Name</div>
+            <div class="cart-item-price">$19.99</div>
+            <div class="cart-item-qty-controls">
+              <button class="qty-btn minus" aria-label="Decrease quantity">-</button>
+              <span class="cart-item-qty">1</span>
+              <button class="qty-btn plus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          <button class="cart-item-remove" aria-label="Remove item"><i class="fas fa-trash"></i></button>
+        </div>
+        -->
+      </div>
+
+      <div class="cart-summary" id="cart-summary">
+        <div class="summary-header">
+          <h3>Order Summary</h3>
+        </div>
+        <div class="free-shipping-progress">
+          <div class="progress-label">
+            <span id="free-shipping-msg">Add $50.00 more for free shipping!</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="free-shipping-bar" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="summary-details">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="shipping">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Tax</span>
+            <span id="tax">$0.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="total">$0.00</span>
+          </div>
+        </div>
+        <div class="cart-actions">
+          <button class="checkout-btn" onclick="proceedToCheckout()">
+            <span>Proceed to Checkout</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <button class="clear-btn" onclick="clearCart()">
+            <i class="fas fa-trash"></i>
+            <span>Clear Cart</span>
+          </button>
+        </div>
+        <div class="cart-features">
+          <div class="feature">
+            <i class="fas fa-truck"></i>
+            <span>Free Shipping on orders over $50</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-undo"></i>
+            <span>Easy 30-day returns</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <span>Secure checkout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="empty-cart" id="empty-cart">
+      <div class="empty-cart-content">
+        <img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" alt="Empty Cart" class="empty-cart-img"
+          style="width:100px;height:100px;opacity:0.7;">
+        <h3>Your cart is empty</h3>
+        <p>Looks like you haven't added any items to your cart yet.</p>
+        <a href="products.html" class="continue-shopping">
+          <span>Continue Shopping</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-header">
+      <h2>What Our Customers Say</h2>
+      <p>Real experiences from our happy customers</p>
+    </div>
+
+    <div class="testimonials-container">
+      <div class="testimonial-card" style="--testimonial-index: 0;">
+        <div class="testimonial-content">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Absolutely love the products! The quality is exceptional and the customer service
+            is outstanding. I've been shopping here for my kids for over a year now."</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-image">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="Sarah J.">
+          </div>
+          <div class="author-info">
+            <h4>Sarah J.</h4>
+            <p>Mom of Two</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" style="--testimonial-index: 1;">
+        <div class="testimonial-content">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"The best place for moms and kids. The variety of products is amazing, and
+            everything is so well organized. Highly recommend to all parents!"</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-image">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150" alt="Emily R.">
+          </div>
+          <div class="author-info">
+            <h4>Emily R.</h4>
+            <p>First-time Mom</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" style="--testimonial-index: 2;">
+        <div class="testimonial-content">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Fantastic customer service and a wide range of products. The team is always
+            helpful and the delivery is super fast. My go-to place for all baby needs!"</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-image">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150" alt="Jessica L.">
+          </div>
+          <div class="author-info">
+            <h4>Jessica L.</h4>
+            <p>Mom of Three</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials-stats">
+      <div class="stat-item">
+        <div class="stat-number">4.9</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2k+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Would Recommend</div>
+      </div>
+    </div>
+
+    <div class="testimonials-cta">
+      <p>Join our happy customers today!</p>
+      <a href="products.html" class="cta-button">
+        <span>Shop Now</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <section class="payment" id="payment">
+    <div class="payment-header">
+      <h2>Secure Payment Options</h2>
+      <p>Shop with confidence using our secure payment methods</p>
+    </div>
+
+    <div class="payment-container">
+      <div class="payment-methods-grid">
+        <div class="payment-method-card">
+          <i class="fab fa-cc-visa"></i>
+          <h3>Visa</h3>
+          <p>Secure credit and debit card payments</p>
+        </div>
+        <div class="payment-method-card">
+          <i class="fab fa-cc-mastercard"></i>
+          <h3>Mastercard</h3>
+          <p>Widely accepted payment solution</p>
+        </div>
+        <div class="payment-method-card">
+          <i class="fab fa-cc-amex"></i>
+          <h3>American Express</h3>
+          <p>Premium payment experience</p>
+        </div>
+        <div class="payment-method-card">
+          <i class="fab fa-cc-paypal"></i>
+          <h3>PayPal</h3>
+          <p>Fast and secure online payments</p>
+        </div>
+      </div>
+
+      <div class="payment-security">
+        <div class="security-features">
+          <div class="security-feature">
+            <i class="fas fa-shield-alt"></i>
+            <h3>SSL Protected</h3>
+            <p>Your data is encrypted and secure</p>
+          </div>
+          <div class="security-feature">
+            <i class="fas fa-lock"></i>
+            <h3>Secure Checkout</h3>
+            <p>Industry-standard security measures</p>
+          </div>
+          <div class="security-feature">
+            <i class="fas fa-user-shield"></i>
+            <h3>Privacy Protected</h3>
+            <p>Your information is never shared</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="payment-info">
+        <div class="info-card">
+          <i class="fas fa-credit-card"></i>
+          <h3>Multiple Payment Options</h3>
+          <p>Choose from various secure payment methods</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-sync-alt"></i>
+          <h3>Easy Refunds</h3>
+          <p>Quick and hassle-free refund process</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>Help with any payment issues</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <span class="logo-text">Mom & Kids</span>
+          <p>Your trusted partner in motherhood and family care since 2020.</p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="moms-products.html">Mom Products</a></li>
+          <li><a href="kids-products.html">Kids Products</a></li>
+          <li><a href="baby-products.html">Baby Products</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Customer Service</h3>
+        <ul class="footer-links">
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">
+            <span>Subscribe</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-info">
+        <p>&copy; 2025 Mom & Kids. All rights reserved.</p>
+        <div class="footer-extra-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-app-links">
+        <a href="#" class="app-link">
+          <i class="fab fa-apple"></i>
+          <span>Download on App Store</span>
+        </a>
+        <a href="#" class="app-link">
+          <i class="fab fa-google-play"></i>
+          <span>Get it on Google Play</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- js link -->
+  <script src="script.js"></script>
+  <script src="custom.js"></script>
+</body>
+
+</html>
