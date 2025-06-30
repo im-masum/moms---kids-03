@@ -541,7 +541,7 @@ nav {
 .hero-feature:hover {
     box-shadow: 0 6px 32px rgba(67, 173, 249, 0.16);
     transform: translateY(-6px) scale(1.03);
-    background: #f6faff;
+    background: var(--bg-main);
 }
 
 .feature-icon {
@@ -627,7 +627,7 @@ nav {
 .stat:hover {
     box-shadow: 0 6px 32px rgba(67, 173, 249, 0.16);
     transform: translateY(-4px) scale(1.03);
-    background: #f6faff;
+    background: var(--bg-main);
 }
 
 .stat-icon {
@@ -697,7 +697,7 @@ nav {
     position: absolute;
     
     left: 50%;
-    bottom: 1rem;
+    bottom: 0;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -713,7 +713,6 @@ nav {
     border-image: linear-gradient(120deg, #43adf9 0%, #bed7f9 100%);
     border-image-slice: 1;
     z-index: 10;
-    font-size: 1.08em;
     color: #232336;
     font-weight: 500;
     letter-spacing: 0.2px;
@@ -730,7 +729,7 @@ nav {
 
 .hero-scroll span {
     margin-bottom: 0.2em;
-    font-size: 1em;
+    font-size: 1rem;
     color: #232336;
     opacity: 0.85;
 }
