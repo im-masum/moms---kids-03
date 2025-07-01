@@ -797,7 +797,7 @@ nav {
 /* === Features Section Improvements === */
 .features {
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 3rem auto;
     padding: 2rem 1rem;
     background: var(--bg-main);
@@ -806,7 +806,6 @@ nav {
     box-shadow: 0 4px 32px rgba(67, 173, 249, 0.08);
 }
 
-/* === Enhanced Features Header & Grid === */
 .features-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -820,25 +819,24 @@ nav {
 .features-header::before {
     content: '';
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
+    transform: translateX(-50%);
+    width: 200px;
     height: 4px;
-    background: linear-gradient(90deg, #43adf9, #bed7f9);
+    background: linear-gradient(90deg, #43adf9, #2aefe8);
     border-radius: 2px;
-    opacity: 0.6;
 }
 
 .features-header h1 {
     font-size: 3.2em;
     font-weight: 900;
     color: var(--text-accent);
-    margin-bottom: 0.8em;
+    margin-bottom: 1rem;
     letter-spacing: 1.5px;
     text-shadow: 0 4px 16px rgba(67, 173, 249, 0.1);
     position: relative;
-    z-index: 1;
+    display: inline-block;
 }
 
 .features-header h1::after {
@@ -847,9 +845,9 @@ nav {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 200px;
     height: 3px;
-    background: linear-gradient(90deg, #43adf9, #bed7f9);
+    background: linear-gradient(90deg, #43adf9, #43e9f2);
     border-radius: 2px;
 }
 
@@ -857,73 +855,35 @@ nav {
     font-size: 1.3em;
     color: var(--text-secondary);
     max-width: 700px;
-    margin: 0 auto;
+    margin: 1.5rem auto 0;
     line-height: 1.7;
     font-weight: 400;
-    position: relative;
-    z-index: 1;
+    opacity: 0.9;
 }
 
 .features-grid {
-    max-width: 100%;
-    width: 100%;
-    padding: min(1rem, 8%) 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 0 1rem;
+    max-width: 1400px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    
 }
 
 .feature-card {
-    max-width: 450px;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-main);
-    color: var(--text-main);
-    border-radius: 20px;
-    padding: 2.5rem 2rem;
-    box-shadow: 0 4px 24px rgba(67, 173, 249, 0.08);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(67, 173, 249, 0.1);
+    background: linear-gradient(135deg, #fff 0%, #f8faff 100%);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 8px 32px rgba(67, 173, 249, 0.08);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(67, 173, 249, 0.08);
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.6s ease forwards;
-}
-
-.feature-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.feature-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.feature-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.feature-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.feature-card:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.feature-card:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .feature-card::before {
@@ -932,96 +892,171 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #43adf9, #bed7f9);
+    height: 6px;
+    background: linear-gradient(90deg, #43adf9, #bed7f9, #43adf9);
     transform: scaleX(0);
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
+    border-radius: 24px 24px 0 0;
+}
+
+.feature-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(67, 173, 249, 0.02) 0%, rgba(190, 215, 249, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .feature-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(67, 173, 249, 0.2);
-    border-color: rgba(67, 173, 249, 0.3);
+    transform: translateY(-16px) scale(1.03);
+    box-shadow: 0 20px 60px rgba(67, 173, 249, 0.15);
+    border-color: rgba(67, 173, 249, 0.2);
+    background: linear-gradient(135deg, #fff 0%, #f0f8ff 100%);
 }
 
 .feature-card:hover::before {
     transform: scaleX(1);
 }
 
+.feature-card:hover::after {
+    opacity: 1;
+}
+
 .feature-card .feature-icon {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(135deg, #43adf9, #bed7f9);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
-    box-shadow: 0 6px 20px rgba(67, 173, 249, 0.25);
-    transition: all 0.4s ease;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 24px rgba(67, 173, 249, 0.25);
+    transition: all 0.5s ease;
     position: relative;
+    z-index: 2;
+}
+
+.feature-card .feature-icon::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(135deg, #43adf9, #bed7f9);
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: -1;
+    transition: all 0.5s ease;
+    filter: blur(8px);
 }
 
 .feature-card .feature-icon::after {
     content: '';
     position: absolute;
-    inset: -3px;
+    inset: -2px;
     background: linear-gradient(135deg, #43adf9, #bed7f9);
     border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
+    opacity: 0.1;
+    z-index: -2;
+    transition: all 0.5s ease;
 }
 
 .feature-card:hover .feature-icon {
-    transform: scale(1.15) rotate(8deg);
+    transform: scale(1.2) rotate(12deg);
+    box-shadow: 0 12px 32px rgba(67, 173, 249, 0.35);
+}
+
+.feature-card:hover .feature-icon::before {
+    transform: scale(1.3);
+    opacity: 0.4;
+    filter: blur(12px);
 }
 
 .feature-card:hover .feature-icon::after {
-    opacity: 0.3;
+    transform: scale(1.1);
+    opacity: 0.2;
 }
 
 .feature-card .feature-icon i {
-    font-size: 2em;
+    font-size: 2.2em;
     color: #fff;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon i {
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+    transform: scale(1.1);
 }
 
 .feature-card h2 {
-    font-size: 1.6em;
-    font-weight: 800;
+    font-size: 1.8em;
+    font-weight: 900;
     color: var(--text-accent);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 0.8px;
     line-height: 1.3;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #43adf9, #bed7f9);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+}
+
+.feature-card:hover h2::after {
+    transform: scaleX(1);
 }
 
 .feature-card p {
     color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    font-size: 1.05em;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    font-size: 1.1em;
     font-weight: 400;
+    position: relative;
+    z-index: 2;
 }
 
 .feature-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .feature-list li {
-    padding: 0.7rem 0;
+    padding: 0.8rem 0;
     color: var(--text-main);
     position: relative;
-    padding-left: 2rem;
-    font-size: 1em;
+    padding-left: 2.5rem;
+    font-size: 1.05em;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 0.3rem;
 }
 
 .feature-list li:hover {
     color: #43adf9;
+    background: rgba(67, 173, 249, 0.05);
+    padding-left: 3rem;
+    transform: translateX(5px);
 }
 
 .feature-list li::before {
@@ -1030,80 +1065,80 @@ nav {
     left: 0;
     color: #43adf9;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.3em;
     background: rgba(67, 173, 249, 0.1);
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(67, 173, 249, 0.2);
 }
 
 .feature-list li:hover::before {
     background: #43adf9;
     color: #fff;
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(360deg);
+    box-shadow: 0 4px 12px rgba(67, 173, 249, 0.4);
 }
 
 @media (max-width: 900px) {
-    .features-header {
-        margin-bottom: 3rem;
-        padding: 1.5rem 1rem;
-    }
-
-    .features-header h1 {
-        font-size: 2.5em;
-    }
-
-    .features-header p {
-        font-size: 1.15em;
-    }
-
-    .features-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-
     .feature-card {
-        padding: 2rem 1.5rem;
+        padding: 2.5rem 2rem;
+        border-radius: 20px;
+    }
+
+    .feature-card .feature-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 2rem;
+    }
+
+    .feature-card .feature-icon i {
+        font-size: 2em;
+    }
+
+    .feature-card h2 {
+        font-size: 1.6em;
+    }
+
+    .feature-card p {
+        font-size: 1.05em;
     }
 }
 
 @media (max-width: 600px) {
-    .features-header {
-        margin-bottom: 2.5rem;
-        padding: 1.5rem 0.5rem;
-    }
-
-    .features-header h1 {
-        font-size: 2em;
-    }
-
-    .features-header p {
-        font-size: 1em;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
     .feature-card {
-        padding: 1.8rem 1.2rem;
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
     }
 
     .feature-card .feature-icon {
         width: 60px;
         height: 60px;
+        margin-bottom: 1.8rem;
     }
 
     .feature-card .feature-icon i {
-        font-size: 1.7em;
+        font-size: 1.8em;
     }
 
     .feature-card h2 {
         font-size: 1.4em;
+    }
+
+    .feature-card p {
+        font-size: 1em;
+    }
+
+    .feature-list li {
+        font-size: 1em;
+        padding-left: 2rem;
+    }
+
+    .feature-list li:hover {
+        padding-left: 2.5rem;
     }
 }
