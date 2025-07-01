@@ -1,11 +1,14 @@
 @import url('./globals.css');
 
+/*===Navbar==== */
 nav {
     background: var(--bg-main);
     box-shadow: 0 4px 24px rgba(67, 173, 249, 0.10);
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 8px;
     width: 100%;
     max-width: 100%;
@@ -15,7 +18,10 @@ nav {
     transition: background 0.3s, box-shadow 0.3s;
 }
 
+
+
 .nav-container {
+    max-width: 100%;
     width: 100%;
     margin: 0.1rem auto;
     display: flex;
@@ -26,6 +32,11 @@ nav {
     border-radius: 16px;
     box-shadow: 0 2px 16px rgba(67, 173, 249, 0.06);
     transition: background 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode .nav-container {
+    background: rgba(35, 35, 54, 0.96);
+    box-shadow: 0 2px 16px rgba(35, 35, 54, 0.12);
 }
 
 .logo-text {
@@ -51,7 +62,7 @@ nav {
 .nav-link {
     font-size: 1.1em;
     color: var(--text-main);
-    padding: 0.5em 1.2em;
+    padding: 0.5em 1.2em 0.5em 1.2em;
     border-radius: 6px;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -63,6 +74,10 @@ nav {
     cursor: pointer;
     z-index: 1;
     overflow: hidden;
+}
+
+.nav-link:focus {
+    box-shadow: 0 0 0 2px var(--btn-primary-bg);
 }
 
 .nav-link.active, .nav-link:hover {
@@ -83,12 +98,57 @@ nav {
     z-index: 2;
 }
 
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 1.2em;
+/* Hamburger Animation */
+.menu-toggle {
+    display: none;
+    position: relative;
+    z-index: 1201;
+    transition: background 0.2s, color 0.2s;
 }
 
+.menu-toggle.open .menu-icon {
+    background: transparent;
+}
+
+.menu-toggle.open .menu-icon::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .menu-icon::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-icon {
+    display: none;
+    width: 22px;
+    height: 2.5px;
+    background: var(--btn-primary-text);
+    position: relative;
+    border-radius: 2px;
+    transition: background 0.2s;
+}
+
+.menu-icon::before, .menu-icon::after {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 2.5px;
+    background: var(--btn-primary-text);
+    position: absolute;
+    left: 0;
+    border-radius: 2px;
+    transition: transform 0.3s, background 0.2s;
+}
+
+.menu-icon::before {
+    top: -7px;
+}
+
+.menu-icon::after {
+    top: 7px;
+}
+
+/* Cart Icon */
 .cart-icon {
     display: flex;
     align-items: center;
@@ -104,6 +164,10 @@ nav {
     box-shadow: 0 2px 8px rgba(67, 173, 249, 0.06);
 }
 
+.cart-icon:hover {
+    background: #1f354b;
+}
+
 .cart-count {
     position: absolute;
     top: -10px;
@@ -117,6 +181,70 @@ nav {
     border: 2px solid #fff;
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+}
+
+.dark-toggle {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(67, 173, 249, 0.08);
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu-toggle {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(67, 173, 249, 0.08);
+    transition: background 0.2s, color 0.2s;
+
+}
+
+.dark-toggle:hover, .menu-toggle:hover {
+    background: #bed7f9;
+    color: var(--text-accent);
+}
+
+/* Mobile Overlay for Menu */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1200;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav-overlay.open {
+    display: block;
+    opacity: 1;
+}
+
+/* Responsive Navbar */
 @media (max-width: 900px) {
     .nav-container {
         flex-direction: column;
@@ -137,13 +265,42 @@ nav {
     }
 
     .nav-links ul {
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 70vw;
+        max-width: 320px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.97);
         flex-direction: column;
         gap: 1.5em;
         align-items: flex-start;
         padding: 2em 1.5em;
+        box-shadow: 2px 0 16px rgba(0, 0, 0, 0.08);
+        z-index: 1201;
+        transition: left 0.3s;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        overflow-y: auto;
+    }
+
+    .dark-mode .nav-links ul {
+        background: rgba(35, 35, 54, 0.97);
+    }
+
+    .nav-links ul.open {
+        left: 0;
     }
 
     .nav-actions {
         gap: 0.7em;
+    }
+
+    .menu-toggle, .menu-icon {
+        display: flex !important;
+    }
+
+    .nav-overlay {
+        display: block;
     }
 }
