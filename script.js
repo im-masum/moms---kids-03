@@ -66,3 +66,49 @@ function updateCartCount(count) {
 }
 
 // Example usage: updateCartCount(3);
+
+// Animated achievement counters for About section (only when visible)
+function animateCounter(element, target, duration = 1200) {
+  let start = 0;
+  const step = Math.ceil(target / (duration / 16));
+  function update() {
+    start += step;
+    if (start >= target) {
+      element.textContent = target;
+    } else {
+      element.textContent = start;
+      requestAnimationFrame(update);
+    }
+  }
+  update();
+}
+
+function animateAchievementsWhenVisible() {
+  const achievements = document.querySelectorAll('.achievement-number');
+  if (!achievements.length) return;
+  let animated = false;
+  const observer = new window.IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animated) {
+        achievements.forEach(el => {
+          const target = parseInt(el.getAttribute('data-count'), 10);
+          animateCounter(el, target);
+        });
+        animated = true;
+        obs.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  achievements.forEach(el => observer.observe(el));
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  animateAchievementsWhenVisible();
+
+  // Pulse animation for About header accent heart
+  const accent = document.querySelector('.about-title .title-accent');
+  if (accent) {
+    accent.style.animation = 'pulseAccent 1.5s infinite alternate';
+  }
+});
+
