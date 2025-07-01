@@ -1501,3 +1501,136 @@ nav {
         height: 70px;
     }
 }
+
+/* === About Section Content Improvements === */
+.about-tagline {
+    font-size: 1.3rem;
+    color: #ff69b4;
+    font-weight: 700;
+    margin-bottom: 1.2em;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #ff69b455;
+}
+
+.about-header-underline {
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #ff69b4, #ffd6e6, #ff69b4);
+    border-radius: 3px;
+    margin: 0.7em auto 1.2em auto;
+    box-shadow: 0 2px 8px #ff69b455;
+    animation: underlineGrow 1.2s cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+@keyframes underlineGrow {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 80px;
+        opacity: 1;
+    }
+}
+
+.about-main-content {
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+
+.about-story-block, .about-values-block {
+    flex: 1 1 320px;
+    min-width: 280px;
+    background: #fff;
+    border-radius: 1em;
+    box-shadow: 0 2px 12px rgba(255, 105, 180, 0.07);
+    padding: 2em 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.about-story-block h3, .about-values-block h3 {
+    color: #ff69b4;
+    margin-bottom: 0.7em;
+}
+
+.about-values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-values-list li {
+    font-size: 1.08em;
+    color: #444;
+    margin-bottom: 0.7em;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+
+.about-values-list i {
+    color: #ff69b4;
+    font-size: 1.2em;
+}
+
+.about-why-choose {
+    text-align: center;
+    margin: 2.5em 0 1.5em 0;
+}
+
+.about-why-choose h3 {
+    color: #ff69b4;
+    margin-bottom: 1em;
+}
+
+.about-why-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.about-why-item {
+    background: #fff0fa;
+    color: #ff69b4;
+    border-radius: 1em;
+    padding: 1em 1.5em;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    box-shadow: 0 2px 8px rgba(255, 105, 180, 0.07);
+    margin-bottom: 1em;
+}
+
+.about-why-item i {
+    font-size: 1.3em;
+}
+
+@media (max-width: 900px) {
+    .about-main-content {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .about-why-grid {
+        gap: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-story-block, .about-values-block {
+        padding: 1.2em 0.7em;
+    }
+
+    .about-why-item {
+        padding: 0.8em 1em;
+        font-size: 1em;
+    }
+}
