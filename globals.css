@@ -1,4 +1,4 @@
-/* === Globals === */
+/* Global Styles */
 :root {
     --bg-main: #fff8fa;
     --bg-navbar: #fff;
@@ -13,6 +13,24 @@
     --btn-secondary-border: #343333;
     --cart-count-bg: #a4989e;
     --cart-count-text: #fff;
+}
+
+
+/* Dark Mode Styles */
+.dark-mode {
+    --bg-main: #181824;
+    --bg-navbar: #232336;
+    --bg-hero: linear-gradient(120deg, #232336 0%, #181824 100%);
+    --text-main: #f3f3f3;
+    --text-accent: #ffd700;
+    --text-secondary: #e0e0e0;
+    --btn-primary-bg: #ffd700;
+    --btn-primary-text: #232336;
+    --btn-secondary-bg: #232336;
+    --btn-secondary-text: #ffd700;
+    --btn-secondary-border: #ffd700;
+    --cart-count-bg: #ffd700;
+    --cart-count-text: #232336;
 }
 
 * {
@@ -38,6 +56,7 @@ body {
     padding: 0;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Segoe UI', 'Arial', sans-serif;
     margin: 0 0 0.5em 0;
@@ -50,20 +69,4 @@ a {
 
 a:hover {
     color: #9dfd59;
-}
-
-.flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
 }
