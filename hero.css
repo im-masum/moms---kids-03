@@ -1,0 +1,137 @@
+@import url('./globals.css');
+
+.hero {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-hero);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(67, 173, 249, 0.10);
+    margin: 2rem 0 1.5rem 0;
+    padding: 3rem 0 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.hero-text h1 {
+    font-size: 3.2em;
+    font-weight: 900;
+    color: var(--text-accent);
+    margin-bottom: 0.3em;
+    letter-spacing: 1.5px;
+    text-shadow: 0 4px 24px rgba(67, 173, 249, 0.10);
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    color: #4a4a4a;
+    margin-bottom: 2em;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(67, 173, 249, 0.04);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2em;
+    margin-bottom: 2em;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.9em 2.2em;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(67, 173, 249, 0.08);
+    letter-spacing: 0.5px;
+}
+
+.cta-btn.primary {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+}
+
+.cta-btn.primary:hover {
+    background: #1f354b;
+    color: #fff;
+}
+
+.cta-btn.secondary {
+    background: #fff;
+    color: var(--btn-primary-bg);
+    border: 2px solid var(--btn-primary-bg);
+}
+
+.cta-btn.secondary:hover {
+    background: #bed7f9;
+    color: #232336;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 2rem 0 1.5rem 0;
+        min-height: 40vh;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.1em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.7em;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 1.2rem 0 1rem 0;
+        border-radius: 10px;
+    }
+
+    .hero-content {
+        padding: 0 0.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.3em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+}
