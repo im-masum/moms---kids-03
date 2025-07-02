@@ -99,6 +99,7 @@
     justify-content: center;
     max-width: 400px;
     width: 100%;
+    height: 550px;
     border-radius: 24px;
     padding: 3rem 2.5rem;
     box-shadow: 0 8px 32px rgba(67, 173, 249, 0.08);
@@ -123,7 +124,7 @@
 .feature-card .feature-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #43adf9, #bed7f9);
+    /* background: linear-gradient(135deg, #43adf9, #bed7f9); */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -137,7 +138,6 @@
 
 .feature-card .feature-icon i {
     font-size: 2.2em;
-    color: #fff;
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
     transition: all 0.3s ease;
 }
