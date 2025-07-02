@@ -20,9 +20,8 @@
     letter-spacing: 2px;
     background: var(--bg-main);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: var(--text-accent);
     background-clip: text;
-    text-fill-color: transparent;
     text-shadow: 0 4px 24px rgba(255, 105, 180, 0.10), 0 1px 0 #fff;
     display: inline-block;
     position: relative;
