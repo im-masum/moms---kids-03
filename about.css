@@ -110,8 +110,6 @@
 .about-story-block, .about-values-block {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
     position: relative;
     flex: 1 1 340px;
     min-width: 280px;
@@ -180,9 +178,9 @@
     gap: 0.7em;
     background: var(--bg-main);
     color: var(--text-main);
-} */
-
-.about-values-list {
+    } */
+    
+    .about-values-list {
     font-size: 1.12em;
     color: var(--text-main);
     background: var(--bg-main);
@@ -191,20 +189,54 @@
     box-shadow: 0 1px 4px rgba(255, 105, 180, 0.05);
     transition: background 0.2s, color 0.2s;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 0.7em;
 }
+.about-value-card {
+    background: var(--bg-main);
+    color: var(--text-main);
+    border-radius: 0.7em;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    font-size: 1.08em;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
 
+.about-value-card i {
+    font-size: 1.3em;
+}
+
+.about-value-hover {
+    display: none;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff69b4;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 0.7em;
+    font-size: 0.98em;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px #ff69b455;
+    z-index: 10;
+}
+
+.about-values-list :hover {
+    background: var(--bg-main);
+    color: var(--text-accent);
+}
 .about-values-list i {
     color: var(--text-accent);
     font-size: 1.2em;
 }
 
-.about-values-list :hover {
-    background: var(--bg-main);
-    color: #ff69b4;
-}
 
 .about-why-choose {
     text-align: center;
@@ -219,7 +251,7 @@
 }
 
 .about-why-choose h3 {
-    color:var(--text-accent);
+    color: var(--text-accent);
     margin-bottom: 1.2em;
     font-size: 1.25em;
     font-weight: 700;
@@ -233,7 +265,7 @@
 }
 
 .about-why-item {
-    background:var(--bg-main);
+    background: var(--bg-main);
     color: var(--text-primary);
     border-radius: 1em;
     padding: 1.1em 1.7em;
@@ -254,7 +286,7 @@
 
 .about-why-item:hover {
     background: var(--bg-main);
-    color:var(--text-accent);
+    color: var(--text-accent);
     box-shadow: 0 4px 16px rgba(255, 105, 180, 0.13);
 }
 
@@ -320,45 +352,7 @@
     gap: 0.5em;
 }
 
-.about-values-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
 
-.about-value-card {
-    background: #fff0fa;
-    border-radius: 0.7em;
-    padding: 0.8em 1.2em;
-    display: flex;
-    align-items: center;
-    gap: 0.7em;
-    font-size: 1.08em;
-    color: #ff69b4;
-    position: relative;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-}
-
-.about-value-card i {
-    font-size: 1.3em;
-}
-
-.about-value-hover {
-    display: none;
-    position: absolute;
-    left: 110%;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #ff69b4;
-    color: #fff;
-    padding: 0.5em 1em;
-    border-radius: 0.7em;
-    font-size: 0.98em;
-    white-space: nowrap;
-    box-shadow: 0 2px 8px #ff69b455;
-    z-index: 10;
-}
 
 .about-value-card:hover .about-value-hover,
 .about-value-card:focus .about-value-hover {
