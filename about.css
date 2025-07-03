@@ -130,10 +130,11 @@
 
 .about-story-block h3, .about-values-block h3 {
     color: var(--text-accent);
-    margin-bottom: 0.7em;
-    font-size: 1.3em;
+    margin-bottom: 1rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.5px;
+    padding: min(1rem, 8%) 2rem;
 }
 
 .about-story-block p {
@@ -141,6 +142,8 @@
     font-size: 1.08em;
     line-height: 1.7;
     margin-bottom: 1.2em;
+    padding: min(1rem, 8%) 2rem;
+
 }
 
 .about-quote {
@@ -168,17 +171,6 @@
     margin-left: 1em;
     color: var(--text-accent);
 }
-
-/* .about-values-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7em;
-    background: var(--bg-main);
-    color: var(--text-main);
-    } */
 
 .about-values-list {
     font-size: 1.12em;
@@ -211,6 +203,7 @@
 
 .about-value-card i {
     font-size: 1.3em;
+    background: var(--bg-main);
 }
 
 .about-value-hover {
@@ -219,8 +212,8 @@
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--text-primary);
-    color: #fff;
+    background: var(--bg-main);
+    color: var(--text-primary);
     padding: min(1rem, 8%) 2rem;
     border-radius: 0.7em;
     font-size: 0.98em;
@@ -235,7 +228,6 @@
 }
 
 .about-values-list i {
-    color: var(--text-accent);
     font-size: 1.2em;
 }
 
