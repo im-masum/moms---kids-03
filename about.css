@@ -144,13 +144,13 @@
 }
 
 .about-quote {
-    background: linear-gradient(90deg, #fff0fa 60%, #ffe4f3 100%);
-    border-left: 5px solid #ff69b4;
+    background: var(--bg-main);
+    border-left: 5px solid var(--text-accent);
     margin: 1.5em 0 0.5em 0;
     padding: 1em 1.5em;
     border-radius: 0.9em;
     font-style: italic;
-    color: #a9447a;
+    color: var(--text-main);
     display: flex;
     align-items: center;
     gap: 1em;
@@ -159,7 +159,7 @@
 
 .about-quote i {
     font-size: 1.3em;
-    color: #ff69b4;
+    color: var(--text-main);
 }
 
 .about-quote-author {
