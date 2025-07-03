@@ -215,12 +215,12 @@
 .about-value-hover {
     display: none;
     position: absolute;
-    left: 110%;
+    left: 100%;
     top: 50%;
     transform: translateY(-50%);
-    background: #ff69b4;
+    background: var(--text-primary);
     color: #fff;
-    padding: 0.5em 1em;
+    padding: min(1rem, 8%) 2rem;
     border-radius: 0.7em;
     font-size: 0.98em;
     white-space: nowrap;
