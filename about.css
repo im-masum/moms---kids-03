@@ -201,8 +201,8 @@
     font-size: 1.2em;
 }
 
-.about-values-list li:hover {
-    background: #ffe4f3;
+.about-values-list :hover {
+    background: var(--bg-main);
     color: #ff69b4;
 }
 
