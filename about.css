@@ -98,6 +98,8 @@
 
 .about-main-content {
     display: flex;
+    background: var(--bg-main);
+    color: var(--text-main);
     gap: 3.5em;
     justify-content: center;
     align-items: flex-start;
@@ -108,7 +110,7 @@
 .about-story-block, .about-values-block {
     flex: 1 1 340px;
     min-width: 280px;
-    background: linear-gradient(120deg, #fff 80%, #fff0fa 100%);
+    /* background: linear-gradient(120deg, #fff 80%, #fff0fa 100%); */
     border-radius: 1.2em;
     box-shadow: 0 4px 24px rgba(255, 105, 180, 0.09);
     padding: 2.2em 2em;
