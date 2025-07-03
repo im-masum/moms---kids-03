@@ -114,7 +114,6 @@
     flex: 1 1 350px;
     min-width: 300px;
     padding: min(1rem, 8%) 1rem;
-    margin-bottom: 1.5em;
     background: var(--bg-main);
     color: var(--text-main);
     border-radius: 10px;
