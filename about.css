@@ -87,7 +87,7 @@
 
 .about-mission {
     font-size: 1.18rem;
-    color: #444;
+    color:var(--text-main);
     margin: 0.7em 0 1.7em 0;
     font-weight: 500;
     background: var(--bg-main);
