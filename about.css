@@ -111,8 +111,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    flex: 1 1 340px;
-    min-width: 280px;
+    flex: 1 1 350px;
+    min-width: 300px;
     padding: min(1rem, 8%) 1rem;
     margin-bottom: 1.5em;
     background: var(--bg-main);
@@ -231,6 +231,20 @@
     font-size: 1.2em;
 }
 
+.about-story-bullets {
+    list-style: none;
+    padding: min(1rem, 8%) 2rem;
+    margin: 1em 0 1.5em 0;
+}
+
+.about-story-bullets li {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
 
 .about-why-choose {
     text-align: center;
@@ -331,20 +345,6 @@
     }
 }
 
-.about-story-bullets {
-    list-style: none;
-    padding: 0;
-    margin: 1em 0 1.5em 0;
-}
-
-.about-story-bullets li {
-    font-size: 1.05em;
-    color: #555;
-    margin-bottom: 0.5em;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-}
 
 
 
