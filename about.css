@@ -50,7 +50,7 @@
 }
 
 .about-header-underline {
-    width: 90px;
+    width: 200px;
     height: 6px;
     background: linear-gradient(90deg, #69f3ff, #c1a00f, #e13930);
     border-radius: 3px;
@@ -137,7 +137,7 @@
 }
 
 .about-story-block p {
-    color: #555;
+    color: var(--text-main);
     font-size: 1.08em;
     line-height: 1.7;
     margin-bottom: 1.2em;
@@ -168,7 +168,9 @@
     margin-left: 1em;
     color: var(--text-accent);
 }
+.about-value-card{
 
+}
 .about-values-list {
     list-style: none;
     padding: 0;
@@ -194,7 +196,7 @@
 }
 
 .about-values-list li i {
-    color: #ff69b4;
+    color: var(--text-accent);
     font-size: 1.2em;
 }
 
@@ -206,8 +208,7 @@
 .about-why-choose {
     text-align: center;
     margin: 3em 0 2em 0;
-    /* background: linear-gradient(90deg, #fff0fa 60%, #ffe4f3 100%); */
-
+    background: var(--bg-main);
     border-radius: 1.2em;
     box-shadow: 0 2px 12px rgba(255, 105, 180, 0.07);
     padding: 2em 1em 1.5em 1em;
@@ -217,7 +218,7 @@
 }
 
 .about-why-choose h3 {
-    color: #ff69b4;
+    color:var(--text-accent);
     margin-bottom: 1.2em;
     font-size: 1.25em;
     font-weight: 700;
@@ -231,8 +232,8 @@
 }
 
 .about-why-item {
-    background: #fff;
-    color: #ff69b4;
+    background:var(--bg-main);
+    color: var(--text-primary);
     border-radius: 1em;
     padding: 1.1em 1.7em;
     font-size: 1.13em;
@@ -251,8 +252,8 @@
 }
 
 .about-why-item:hover {
-    background: #ffe4f3;
-    color: #a9447a;
+    background: var(--bg-main);
+    color:var(--text-accent);
     box-shadow: 0 4px 16px rgba(255, 105, 180, 0.13);
 }
 
