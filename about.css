@@ -110,6 +110,8 @@
 .about-story-block, .about-values-block {
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
     position: relative;
     flex: 1 1 340px;
     min-width: 280px;
@@ -169,7 +171,7 @@
     color: var(--text-accent);
 }
 
-.about-values-list {
+/* .about-values-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -178,9 +180,9 @@
     gap: 0.7em;
     background: var(--bg-main);
     color: var(--text-main);
-}
+} */
 
-.about-values-list li{
+.about-values-list {
     font-size: 1.12em;
     color: var(--text-main);
     background: var(--bg-main);
@@ -189,11 +191,12 @@
     box-shadow: 0 1px 4px rgba(255, 105, 180, 0.05);
     transition: background 0.2s, color 0.2s;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     gap: 0.7em;
 }
 
-.about-values-list li i {
+.about-values-list i {
     color: var(--text-accent);
     font-size: 1.2em;
 }
