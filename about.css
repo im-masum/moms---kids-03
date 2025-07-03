@@ -168,9 +168,7 @@
     margin-left: 1em;
     color: var(--text-accent);
 }
-.about-value-card{
 
-}
 .about-values-list {
     list-style: none;
     padding: 0;
@@ -182,7 +180,7 @@
     color: var(--text-main);
 }
 
-.about-values-list li {
+.about-values-list li{
     font-size: 1.12em;
     color: var(--text-main);
     background: var(--bg-main);
