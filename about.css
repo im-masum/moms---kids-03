@@ -87,7 +87,7 @@
 
 .about-mission {
     font-size: 1.18rem;
-    color:var(--text-main);
+    color: var(--text-main);
     margin: 0.7em 0 1.7em 0;
     font-weight: 500;
     background: var(--bg-main);
@@ -108,17 +108,19 @@
 }
 
 .about-story-block, .about-values-block {
-    flex: 1 1 340px;
-    min-width: 280px;
-    /* background: linear-gradient(120deg, #fff 80%, #fff0fa 100%); */
-    border-radius: 1.2em;
-    box-shadow: 0 4px 24px rgba(255, 105, 180, 0.09);
-    padding: 2.2em 2em;
-    margin-bottom: 1.5em;
-    transition: box-shadow 0.2s, transform 0.2s;
-    position: relative;
     display: flex;
     flex-direction: column;
+    position: relative;
+    flex: 1 1 340px;
+    min-width: 280px;
+    padding: min(1rem, 8%) 1rem;
+    margin-bottom: 1.5em;
+    background: var(--bg-main);
+    color: var(--text-main);
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(255, 105, 180, 0.09);
+    transition: box-shadow 0.2s, transform 0.2s;
+
 }
 
 .about-story-block:hover, .about-values-block:hover {
@@ -127,7 +129,7 @@
 }
 
 .about-story-block h3, .about-values-block h3 {
-    color: #ff69b4;
+    color: var(--text-accent);
     margin-bottom: 0.7em;
     font-size: 1.3em;
     font-weight: 700;
@@ -295,5 +297,84 @@
     .about-why-item {
         padding: 0.8em 1em;
         font-size: 1em;
+    }
+}
+
+.about-story-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 1.5em 0;
+}
+
+.about-story-bullets li {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.about-values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.about-value-card {
+    background: #fff0fa;
+    border-radius: 0.7em;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    font-size: 1.08em;
+    color: #ff69b4;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.about-value-card i {
+    font-size: 1.3em;
+}
+
+.about-value-hover {
+    display: none;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff69b4;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 0.7em;
+    font-size: 0.98em;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px #ff69b455;
+    z-index: 10;
+}
+
+.about-value-card:hover .about-value-hover,
+.about-value-card:focus .about-value-hover {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .about-values-list {
+        gap: 0.5em;
+    }
+
+    .about-value-card {
+        padding: 0.7em 0.7em;
+        font-size: 1em;
+    }
+
+    .about-value-hover {
+        left: 0;
+        top: 110%;
+        transform: translateY(0);
+        white-space: normal;
+        min-width: 180px;
     }
 }
