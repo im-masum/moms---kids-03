@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
-    --bg-main: #fff8fa;
-    --bg-navbar: #fff;
+    --bg-main: #f7f2f3;
+    --bg-navbar: #f4eded;
     --bg-hero: linear-gradient(120deg, #bed7f9 0%, #fff8fa 100%);
     --text-main: #1b1b1b;
     --text-accent: #413d18;
