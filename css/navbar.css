@@ -19,14 +19,15 @@ nav {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.96);
+    padding: min(1rem, 8%) 1rem;
+    background: var(--bg-main);
+    color: var(--text-main);
     border-radius: 16px;
     box-shadow: 0 2px 16px rgba(67, 173, 249, 0.06);
     transition: all 0.3s ease;
