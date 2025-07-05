@@ -290,15 +290,18 @@ nav {
 
 @media (max-width: 900px) {
     .nav-container {
+        display: flex;
         padding: 0.75rem 1rem;
         border-radius: 12px;
     }
 
     .nav-links ul {
+        display: block;
         gap: 1.2rem;
     }
 
     .nav-link {
+        display: block;
         padding: 0.4em 1em;
     }
 }
@@ -313,9 +316,9 @@ nav {
         position: fixed;
         top: 0;
         left: -100vw;
-        width: 80vw;
+        width: 80%;
         max-width: 350px;
-        height: 100vh;
+        height: 60vh;
         background: rgba(255, 255, 255, 0.98);
         flex-direction: column;
         gap: 0;
