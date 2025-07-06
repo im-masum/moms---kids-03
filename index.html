@@ -15,8 +15,9 @@
   <link rel="stylesheet" href="css/cart.css">
   <link rel="stylesheet" href="css/testimonials.css">
   <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/footer.css">
-<!-- google fonts link -->
+  <!-- google fonts link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -140,7 +141,7 @@
       <p>Discover our bestsellers for moms, kids, and babies</p>
     </div>
     <div class="products-grid">
-      <div class="product-card">
+      <div class="product-card" data-product-id="baby-blanket">
         <div class="product-image">
           <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400" alt="Soft Baby Blanket">
           <span class="product-badge">Bestseller</span>
@@ -154,7 +155,8 @@
           </div>
         </div>
       </div>
-      <div class="product-card">
+
+      <div class="product-card" data-product-id="water-bottle">
         <div class="product-image">
           <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400" alt="Kids Water Bottle">
           <span class="product-badge">Popular</span>
@@ -168,7 +170,8 @@
           </div>
         </div>
       </div>
-      <div class="product-card">
+
+      <div class="product-card" data-product-id="tote-bag">
         <div class="product-image">
           <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400" alt="Mom's Tote Bag">
           <span class="product-badge">New</span>
@@ -178,6 +181,141 @@
           <p class="product-desc">Spacious, stylish, and perfect for every mom on the go.</p>
           <div class="product-meta">
             <span class="product-price">$34.99</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="baby-diapers">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400" alt="Premium Baby Diapers">
+          <span class="product-badge">Essential</span>
+        </div>
+        <div class="product-info">
+          <h3>Premium Baby Diapers</h3>
+          <p class="product-desc">Ultra-absorbent, hypoallergenic diapers for sensitive skin.</p>
+          <div class="product-meta">
+            <span class="product-price">$29.99</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="kids-backpack">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400" alt="Kids School Backpack">
+          <span class="product-badge">Trending</span>
+        </div>
+        <div class="product-info">
+          <h3>Kids School Backpack</h3>
+          <p class="product-desc">Ergonomic design with multiple compartments for organization.</p>
+          <div class="product-meta">
+            <span class="product-price">$39.99</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="baby-bottles">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400" alt="Anti-Colic Baby Bottles">
+          <span class="product-badge">Top Rated</span>
+        </div>
+        <div class="product-info">
+          <h3>Anti-Colic Baby Bottles</h3>
+          <p class="product-desc">BPA-free bottles with anti-colic system for happy feeding.</p>
+          <div class="product-meta">
+            <span class="product-price">$19.99</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="mom-skincare">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400" alt="Mom's Skincare Set">
+          <span class="product-badge">Luxury</span>
+        </div>
+        <div class="product-info">
+          <h3>Mom's Skincare Set</h3>
+          <p class="product-desc">Natural, organic skincare products for busy moms.</p>
+          <div class="product-meta">
+            <span class="product-price">$49.99</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="kids-pajamas">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400" alt="Kids Pajama Set">
+          <span class="product-badge">Comfort</span>
+        </div>
+        <div class="product-info">
+          <h3>Kids Pajama Set</h3>
+          <p class="product-desc">Soft, breathable cotton pajamas for peaceful sleep.</p>
+          <div class="product-meta">
+            <span class="product-price">$22.99</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="baby-toys">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400" alt="Educational Baby Toys">
+          <span class="product-badge">Educational</span>
+        </div>
+        <div class="product-info">
+          <h3>Educational Baby Toys</h3>
+          <p class="product-desc">Safe, stimulating toys that promote early development.</p>
+          <div class="product-meta">
+            <span class="product-price">$18.99</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="mom-yoga">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400" alt="Mom's Yoga Mat">
+          <span class="product-badge">Wellness</span>
+        </div>
+        <div class="product-info">
+          <h3>Mom's Yoga Mat</h3>
+          <p class="product-desc">Premium non-slip yoga mat for mom's wellness routine.</p>
+          <div class="product-meta">
+            <span class="product-price">$32.99</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="kids-lunchbox">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400" alt="Insulated Lunch Box">
+          <span class="product-badge">Practical</span>
+        </div>
+        <div class="product-info">
+          <h3>Insulated Lunch Box</h3>
+          <p class="product-desc">Keep food fresh and cool with our insulated lunch containers.</p>
+          <div class="product-meta">
+            <span class="product-price">$16.99</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="baby-carrier">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400" alt="Baby Carrier Wrap">
+          <span class="product-badge">Essential</span>
+        </div>
+        <div class="product-info">
+          <h3>Baby Carrier Wrap</h3>
+          <p class="product-desc">Comfortable, adjustable carrier for hands-free parenting.</p>
+          <div class="product-meta">
+            <span class="product-price">$44.99</span>
             <button class="add-to-cart-btn">Add to Cart</button>
           </div>
         </div>
@@ -293,9 +431,9 @@
       <div class="about-story-block">
         <h3>Our Story</h3>
         <p>
-          <p>Founded with a passion for supporting mothers and families, Mom & Kids has grown from a small local store
-            to a trusted online destination for quality products. We understand the unique needs of mothers and their
-            children, and we're committed to providing the best products and service.</p>
+        <p>Founded with a passion for supporting mothers and families, Mom & Kids has grown from a small local store
+          to a trusted online destination for quality products. We understand the unique needs of mothers and their
+          children, and we're committed to providing the best products and service.</p>
         </p>
         <ul class="about-story-bullets">
           <li>🌱 Started in 2020 with a mission to empower moms</li>
@@ -364,136 +502,136 @@
         </div>
       </div>
 
-        <!-- Timeline with icons -->
-        <div class="about-timeline">
-          <div class="timeline-event">
-            <span class="timeline-icon"><i class="fas fa-store"></i></span>
-            <span class="timeline-year">2020</span>
-            <span class="timeline-desc">Founded in Family City</span>
-          </div>
-          <div class="timeline-event">
-            <span class="timeline-icon"><i class="fas fa-globe"></i></span>
-            <span class="timeline-year">2021</span>
-            <span class="timeline-desc">Launched our online store</span>
-          </div>
-          <div class="timeline-event">
-            <span class="timeline-icon"><i class="fas fa-users"></i></span>
-            <span class="timeline-year">2023</span>
-            <span class="timeline-desc">Reached 10,000+ happy families</span>
-          </div>
-          <div class="timeline-event">
-            <span class="timeline-icon"><i class="fas fa-leaf"></i></span>
-            <span class="timeline-year">2024</span>
-            <span class="timeline-desc">Introduced eco-friendly product lines</span>
-          </div>
+      <!-- Timeline with icons -->
+      <div class="about-timeline">
+        <div class="timeline-event">
+          <span class="timeline-icon"><i class="fas fa-store"></i></span>
+          <span class="timeline-year">2020</span>
+          <span class="timeline-desc">Founded in Family City</span>
         </div>
-
-      
-
-        <div class="about-our-team" id="our-team">
-          <i class="fas fa-users"></i>
-          <span>Our Team</span>
+        <div class="timeline-event">
+          <span class="timeline-icon"><i class="fas fa-globe"></i></span>
+          <span class="timeline-year">2021</span>
+          <span class="timeline-desc">Launched our online store</span>
         </div>
-        <div class="about-team">
-          <div class="team-grid">
-            <div class="team-member visible flip-card" tabindex="0" aria-label="Sarah Johnson, Founder & CEO">
-              <div class="member-image">
-                <img
-                  src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1727&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Sarah Johnson, Founder & CEO">
-                <div class="member-overlay">
-                  <p>"Empowering moms everywhere!"</p>
-                </div>
-              </div>
-              <h4>Sarah Johnson</h4>
-              <p>Founder & CEO</p>
-              <div class="team-socials">
-                <a href="#" aria-label="Sarah Johnson on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Sarah Johnson on Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
-              </div>
-              <button class="meet-btn" tabindex="0">Meet</button>
-            </div>
-            <div class="team-member visible flip-card" tabindex="0" aria-label="Emily Davis, Product Curator">
-              <div class="member-image">
-                <img
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Emily Davis, Product Curator">
-                <div class="member-overlay">
-                  <p>"Loves discovering safe, fun products for kids."</p>
-                </div>
-              </div>
-              <h4>Emily Davis</h4>
-              <p>Product Curator</p>
-              <div class="team-socials">
-                <a href="#" aria-label="Emily Davis on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Emily Davis on Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
-              <button class="meet-btn" tabindex="0">Meet</button>
-            </div>
-            <div class="team-member visible flip-card" tabindex="0" aria-label="Jessica Lee, Customer Care">
-              <div class="member-image">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1682095664848-014a0a2bfd8a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Jessica Lee, Customer Care">
-                <div class="member-overlay">
-                  <p>"Here to help, always with a smile!"</p>
-                </div>
-              </div>
-              <h4>Jessica Lee</h4>
-              <p>Customer Care</p>
-              <div class="team-socials">
-                <a href="#" aria-label="Jessica Lee on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Jessica Lee on Facebook" title="Facebook"><i class="fab fa-facebook"></i></a>
-              </div>
-              <button class="meet-btn" tabindex="0">Meet</button>
-            </div>
-          </div>
-
-          <!-- Wavy divider -->
-          <div class="about-wavy-divider">
-            <svg viewBox="0 0 1440 60" width="100%" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0,30 Q360,60 720,30 T1440,30 V60 H0 Z" fill="#4a90e2" fill-opacity="0.07" />
-            </svg>
-          </div>
-
-          <div class="about-our-achievements" id="our-achievements">
-            <i class="fas fa-trophy"></i>
-            <span>Achievements</span>
-          </div>
-          <div class="about-achievements">
-            <div class="achievement-item visible" tabindex="0">
-              <div class="achievement-icon"><i class="fas fa-smile-beam"></i></div>
-              <div class="achievement-number" data-count="10000">0</div>
-              <div class="achievement-label">Happy Families</div>
-              <div class="achievement-progress">
-                <div class="achievement-bar" style="width:0%"></div>
-              </div>
-            </div>
-            <div class="achievement-item visible" tabindex="0">
-              <div class="achievement-icon"><i class="fas fa-box"></i></div>
-              <div class="achievement-number" data-count="500">0</div>
-              <div class="achievement-label">Products</div>
-              <div class="achievement-progress">
-                <div class="achievement-bar" style="width:0%"></div>
-              </div>
-            </div>
-            <div class="achievement-item visible" tabindex="0">
-              <div class="achievement-icon"><i class="fas fa-star"></i></div>
-              <div class="achievement-number" data-count="98">0</div>
-              <div class="achievement-label">Satisfaction</div>
-              <div class="achievement-progress">
-                <div class="achievement-bar" style="width:0%"></div>
-              </div>
-            </div>
-          </div>
+        <div class="timeline-event">
+          <span class="timeline-icon"><i class="fas fa-users"></i></span>
+          <span class="timeline-year">2023</span>
+          <span class="timeline-desc">Reached 10,000+ happy families</span>
         </div>
-        <!-- Call to Action -->
-        <div class="about-cta">
-          <h3>Become a part of our family!</h3>
-          <p>Follow us on social media, join our newsletter, or connect with our community of moms and families.</p>
-          <a href="#contact" class="cta-btn primary">Join Us</a>
+        <div class="timeline-event">
+          <span class="timeline-icon"><i class="fas fa-leaf"></i></span>
+          <span class="timeline-year">2024</span>
+          <span class="timeline-desc">Introduced eco-friendly product lines</span>
         </div>
       </div>
+
+
+
+      <div class="about-our-team" id="our-team">
+        <i class="fas fa-users"></i>
+        <span>Our Team</span>
+      </div>
+      <div class="about-team">
+        <div class="team-grid">
+          <div class="team-member visible flip-card" tabindex="0" aria-label="Sarah Johnson, Founder & CEO">
+            <div class="member-image">
+              <img
+                src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1727&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Sarah Johnson, Founder & CEO">
+              <div class="member-overlay">
+                <p>"Empowering moms everywhere!"</p>
+              </div>
+            </div>
+            <h4>Sarah Johnson</h4>
+            <p>Founder & CEO</p>
+            <div class="team-socials">
+              <a href="#" aria-label="Sarah Johnson on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Sarah Johnson on Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <button class="meet-btn" tabindex="0">Meet</button>
+          </div>
+          <div class="team-member visible flip-card" tabindex="0" aria-label="Emily Davis, Product Curator">
+            <div class="member-image">
+              <img
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Emily Davis, Product Curator">
+              <div class="member-overlay">
+                <p>"Loves discovering safe, fun products for kids."</p>
+              </div>
+            </div>
+            <h4>Emily Davis</h4>
+            <p>Product Curator</p>
+            <div class="team-socials">
+              <a href="#" aria-label="Emily Davis on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Emily Davis on Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button class="meet-btn" tabindex="0">Meet</button>
+          </div>
+          <div class="team-member visible flip-card" tabindex="0" aria-label="Jessica Lee, Customer Care">
+            <div class="member-image">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1682095664848-014a0a2bfd8a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Jessica Lee, Customer Care">
+              <div class="member-overlay">
+                <p>"Here to help, always with a smile!"</p>
+              </div>
+            </div>
+            <h4>Jessica Lee</h4>
+            <p>Customer Care</p>
+            <div class="team-socials">
+              <a href="#" aria-label="Jessica Lee on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Jessica Lee on Facebook" title="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+            <button class="meet-btn" tabindex="0">Meet</button>
+          </div>
+        </div>
+
+        <!-- Wavy divider -->
+        <div class="about-wavy-divider">
+          <svg viewBox="0 0 1440 60" width="100%" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,30 Q360,60 720,30 T1440,30 V60 H0 Z" fill="#4a90e2" fill-opacity="0.07" />
+          </svg>
+        </div>
+
+        <div class="about-our-achievements" id="our-achievements">
+          <i class="fas fa-trophy"></i>
+          <span>Achievements</span>
+        </div>
+        <div class="about-achievements">
+          <div class="achievement-item visible" tabindex="0">
+            <div class="achievement-icon"><i class="fas fa-smile-beam"></i></div>
+            <div class="achievement-number" data-count="10000">0</div>
+            <div class="achievement-label">Happy Families</div>
+            <div class="achievement-progress">
+              <div class="achievement-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div class="achievement-item visible" tabindex="0">
+            <div class="achievement-icon"><i class="fas fa-box"></i></div>
+            <div class="achievement-number" data-count="500">0</div>
+            <div class="achievement-label">Products</div>
+            <div class="achievement-progress">
+              <div class="achievement-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div class="achievement-item visible" tabindex="0">
+            <div class="achievement-icon"><i class="fas fa-star"></i></div>
+            <div class="achievement-number" data-count="98">0</div>
+            <div class="achievement-label">Satisfaction</div>
+            <div class="achievement-progress">
+              <div class="achievement-bar" style="width:0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Call to Action -->
+      <div class="about-cta">
+        <h3>Become a part of our family!</h3>
+        <p>Follow us on social media, join our newsletter, or connect with our community of moms and families.</p>
+        <a href="#contact" class="cta-btn primary">Join Us</a>
+      </div>
+    </div>
     </div>
   </section>
 
